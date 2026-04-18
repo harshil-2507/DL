@@ -1,0 +1,189 @@
+==========================================
+ JOB STARTED ON: Wednesday 15 April 2026 08:51:59 AM IST
+ Agent: WCE_code3_final (ResNet/ViT/Swin)
+==========================================
+Env 'wce_env2' exists. Activating...
+Active env: wce_env2
+torch already installed — skipping pip installs.
+libnvJitLink found at: /home/rahuldixit/.local/lib/python3.10/site-packages/nvidia/nvjitlink/lib
+Wed Apr 15 08:52:03 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   76C    P0            186W /  400W |   12990MiB /  95830MiB |     99%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         3238473      C   python                                10902MiB |
+|    0   N/A  N/A         3728709      C   python                                 1184MiB |
+|    0   N/A  N/A         3728742      C   python                                  868MiB |
++-----------------------------------------------------------------------------------------+
+PyTorch : 2.7.1+cu118
+CUDA    : True
+GPU     : NVIDIA H100 NVL
+==========================================
+ STARTING WCE_code3_final
+==========================================
+Running script: /home/rahuldixit/aksh/dl_project/code3_final.py
+Device: cuda
+IMG=224  BATCH=32  EPOCHS=15  FOCAL_GAMMA=2.0
+
+--- Training ResNet50 ---
+ Ep 1/15 | Loss: 0.7310 | Val F1: 0.5576 | Val Acc: 0.6520
+ Ep 2/15 | Loss: 0.0986 | Val F1: 0.7542 | Val Acc: 0.8408
+ Ep 3/15 | Loss: 0.0294 | Val F1: 0.7283 | Val Acc: 0.8393
+ Ep 4/15 | Loss: 0.0132 | Val F1: 0.7575 | Val Acc: 0.8673
+ Ep 5/15 | Loss: 0.0103 | Val F1: 0.7225 | Val Acc: 0.8424
+ Ep 6/15 | Loss: 0.0111 | Val F1: 0.6788 | Val Acc: 0.8245
+ Ep 7/15 | Loss: 0.0068 | Val F1: 0.7336 | Val Acc: 0.8532
+ Ep 8/15 | Loss: 0.0020 | Val F1: 0.7586 | Val Acc: 0.8566
+ Ep 9/15 | Loss: 0.0010 | Val F1: 0.7849 | Val Acc: 0.8668
+ Ep 10/15 | Loss: 0.0007 | Val F1: 0.7698 | Val Acc: 0.8749
+ Ep 11/15 | Loss: 0.0010 | Val F1: 0.7545 | Val Acc: 0.8713
+ Ep 12/15 | Loss: 0.0005 | Val F1: 0.7268 | Val Acc: 0.8512
+ Ep 13/15 | Loss: 0.0006 | Val F1: 0.7681 | Val Acc: 0.8693
+ Ep 14/15 | Loss: 0.0004 | Val F1: 0.7614 | Val Acc: 0.8648
+ Ep 15/15 | Loss: 0.0005 | Val F1: 0.7626 | Val Acc: 0.8645
+
+ResNet50 Final Report:
+                       precision    recall  f1-score   support
+
+    Ampulla of vater       0.50      1.00      0.67         2
+         Angiectasia       0.88      0.94      0.91       131
+       Blood - fresh       0.72      1.00      0.83        68
+     Blood - hematin       1.00      1.00      1.00         3
+             Erosion       0.42      0.91      0.58        77
+            Erythema       0.22      1.00      0.36        25
+        Foreign body       0.63      0.99      0.77       117
+     Ileocecal valve       0.75      0.90      0.81       629
+    Lymphangiectasia       0.75      0.99      0.86        90
+ Normal clean mucosa       0.99      0.84      0.91      5152
+               Polyp       1.00      1.00      1.00         9
+             Pylorus       0.50      0.95      0.66       230
+Reduced mucosal view       0.72      0.95      0.82       437
+               Ulcer       0.83      0.95      0.88       129
+
+            accuracy                           0.87      7099
+           macro avg       0.71      0.96      0.79      7099
+        weighted avg       0.91      0.87      0.88      7099
+
+
+--- Training ViT ---
+ Ep 1/15 | Loss: 0.3018 | Val F1: 0.7171 | Val Acc: 0.8169
+ Ep 2/15 | Loss: 0.0575 | Val F1: 0.8136 | Val Acc: 0.9049
+ Ep 3/15 | Loss: 0.0165 | Val F1: 0.8080 | Val Acc: 0.8279
+ Ep 4/15 | Loss: 0.0282 | Val F1: 0.7656 | Val Acc: 0.8662
+ Ep 5/15 | Loss: 0.0164 | Val F1: 0.7540 | Val Acc: 0.7064
+ Ep 6/15 | Loss: 0.0037 | Val F1: 0.8188 | Val Acc: 0.9017
+ Ep 7/15 | Loss: 0.0004 | Val F1: 0.8389 | Val Acc: 0.9121
+ Ep 8/15 | Loss: 0.0008 | Val F1: 0.8189 | Val Acc: 0.9045
+ Ep 9/15 | Loss: 0.0002 | Val F1: 0.8163 | Val Acc: 0.9012
+ Ep 10/15 | Loss: 0.0006 | Val F1: 0.8270 | Val Acc: 0.9052
+ Ep 11/15 | Loss: 0.0002 | Val F1: 0.8224 | Val Acc: 0.9052
+ Ep 12/15 | Loss: 0.0002 | Val F1: 0.7930 | Val Acc: 0.8871
+ Ep 13/15 | Loss: 0.0002 | Val F1: 0.8033 | Val Acc: 0.8957
+ Ep 14/15 | Loss: 0.0002 | Val F1: 0.8058 | Val Acc: 0.8984
+ Ep 15/15 | Loss: 0.0001 | Val F1: 0.8078 | Val Acc: 0.8998
+
+ViT Final Report:
+                       precision    recall  f1-score   support
+
+    Ampulla of vater       0.67      1.00      0.80         2
+         Angiectasia       0.90      0.99      0.95       131
+       Blood - fresh       0.94      1.00      0.97        68
+     Blood - hematin       1.00      1.00      1.00         3
+             Erosion       0.46      0.91      0.61        77
+            Erythema       0.31      1.00      0.47        25
+        Foreign body       0.63      0.98      0.77       117
+     Ileocecal valve       0.79      0.93      0.86       629
+    Lymphangiectasia       0.57      0.99      0.72        90
+ Normal clean mucosa       1.00      0.87      0.93      5152
+               Polyp       0.90      1.00      0.95         9
+             Pylorus       0.54      0.96      0.69       230
+Reduced mucosal view       0.79      0.96      0.87       437
+               Ulcer       0.93      0.94      0.93       129
+
+            accuracy                           0.89      7099
+           macro avg       0.75      0.97      0.82      7099
+        weighted avg       0.93      0.89      0.90      7099
+
+
+--- Training Swin ---
+ Ep 1/15 | Loss: 0.4298 | Val F1: 0.6473 | Val Acc: 0.6739
+ Ep 2/15 | Loss: 0.0966 | Val F1: 0.7118 | Val Acc: 0.8207
+ Ep 3/15 | Loss: 0.0467 | Val F1: 0.7753 | Val Acc: 0.8634
+ Ep 4/15 | Loss: 0.0366 | Val F1: 0.6592 | Val Acc: 0.6775
+ Ep 5/15 | Loss: 0.0366 | Val F1: 0.8200 | Val Acc: 0.8928
+ Ep 6/15 | Loss: 0.0212 | Val F1: 0.7220 | Val Acc: 0.8365
+ Ep 7/15 | Loss: 0.0292 | Val F1: 0.7143 | Val Acc: 0.8010
+ Ep 8/15 | Loss: 0.0269 | Val F1: 0.8056 | Val Acc: 0.8885
+ Ep 9/15 | Loss: 0.0080 | Val F1: 0.7955 | Val Acc: 0.9012
+ Ep 10/15 | Loss: 0.0061 | Val F1: 0.7955 | Val Acc: 0.9106
+ Ep 11/15 | Loss: 0.0034 | Val F1: 0.8075 | Val Acc: 0.9019
+ Ep 12/15 | Loss: 0.0032 | Val F1: 0.7923 | Val Acc: 0.9011
+ Ep 13/15 | Loss: 0.0033 | Val F1: 0.8082 | Val Acc: 0.9118
+ Ep 14/15 | Loss: 0.0017 | Val F1: 0.7867 | Val Acc: 0.8932
+ Ep 15/15 | Loss: 0.0026 | Val F1: 0.8222 | Val Acc: 0.9175
+
+Swin Final Report:
+                       precision    recall  f1-score   support
+
+    Ampulla of vater       0.67      1.00      0.80         2
+         Angiectasia       0.90      0.99      0.94       131
+       Blood - fresh       0.96      1.00      0.98        68
+     Blood - hematin       1.00      1.00      1.00         3
+             Erosion       0.46      0.90      0.61        77
+            Erythema       0.36      0.96      0.53        25
+        Foreign body       0.72      1.00      0.84       117
+     Ileocecal valve       0.80      0.90      0.85       629
+    Lymphangiectasia       0.65      0.99      0.78        90
+ Normal clean mucosa       0.99      0.90      0.94      5152
+               Polyp       0.82      1.00      0.90         9
+             Pylorus       0.59      0.97      0.73       230
+Reduced mucosal view       0.89      0.96      0.93       437
+               Ulcer       0.93      0.97      0.95       129
+
+            accuracy                           0.91      7099
+           macro avg       0.77      0.97      0.84      7099
+        weighted avg       0.94      0.91      0.92      7099
+
+
+--- Running Unsupervised K-Means Analysis ---
+Unsupervised Centroid AUROC: 0.9285
+Pipeline Complete. Check outputs_code3 for graphs and error logs.
+Wed Apr 15 09:26:32 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   89C    P0            155W /  400W |    2082MiB /  95830MiB |     71%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         3728709      C   python                                 1184MiB |
+|    0   N/A  N/A         3728742      C   python                                  868MiB |
++-----------------------------------------------------------------------------------------+
+==========================================
+ JOB FINISHED ON: Wednesday 15 April 2026 09:26:32 AM IST
+==========================================

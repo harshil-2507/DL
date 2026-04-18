@@ -1,0 +1,163 @@
+==========================================
+ JOB STARTED ON: Thursday 16 April 2026 08:01:38 AM IST
+ Agent: WCE_code3_final (ResNet/ViT/Swin)
+==========================================
+Env 'wce_env2' exists. Activating...
+Active env: wce_env2
+torch already installed — skipping pip installs.
+libnvJitLink found at: /home/rahuldixit/.local/lib/python3.10/site-packages/nvidia/nvjitlink/lib
+Thu Apr 16 08:01:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   78C    P0            186W /  400W |   11576MiB /  95830MiB |    100%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A          594069      C   python                                10362MiB |
+|    0   N/A  N/A         3728709      C   python                                 1184MiB |
++-----------------------------------------------------------------------------------------+
+PyTorch : 2.7.1+cu118
+CUDA    : True
+GPU     : NVIDIA H100 NVL
+==========================================
+ STARTING WCE_code6_final
+==========================================
+Running script: /home/rahuldixit/aksh/dl_project/6_wce_major_final.py
+Device: cuda
+GPU   : NVIDIA H100 NVL
+
+[Data] Loading D1...
+Train:33066  Val:7086  Test:7086
+Test loader: 7,086 images
+
+[Loading] All saved models...
+  Loaded S1_EffNetB0
+  Loaded S3_EffNetB0
+  Loaded S1_MobileV3
+  Loaded S3_MobileV3
+  Loaded S1_ResNet50
+  Loaded S3_ResNet50
+  Loaded S3_ViT
+  Loaded S3_Swin
+
+[Phase A] Evaluating all models...
+  S1_EffNetB0     Acc(w):0.7086 F1(w):0.7336 Rec(mac):0.9550 F1(mac):0.6597
+  S3_EffNetB0     Acc(w):0.8695 F1(w):0.8855 Rec(mac):0.9460 F1(mac):0.8075
+  S1_MobileV3     Acc(w):0.8366 F1(w):0.8517 Rec(mac):0.9587 F1(mac):0.8143
+  S3_MobileV3     Acc(w):0.8808 F1(w):0.8892 Rec(mac):0.9441 F1(mac):0.7653
+  S1_ResNet50     Acc(w):0.6581 F1(w):0.6904 Rec(mac):0.9465 F1(mac):0.6378
+  S3_ResNet50     Acc(w):0.8826 F1(w):0.8922 Rec(mac):0.9561 F1(mac):0.8095
+  S3_ViT          Acc(w):0.9008 F1(w):0.9104 Rec(mac):0.9524 F1(mac):0.8069
+  S3_Swin         Acc(w):0.9146 F1(w):0.9211 Rec(mac):0.9696 F1(mac):0.8331
+
+Best model: S3_Swin | F1(macro)=0.8331
+Saved CM
+Saved ROC
+
+[Phase B] GradCAM + false sample analysis...
+  Saved gradcam_S1_EffNetB0.png
+  Saved gradcam_S3_EffNetB0.png
+  Saved gradcam_S1_MobileV3.png
+  Saved gradcam_S3_MobileV3.png
+  Saved gradcam_S1_ResNet50.png
+  Saved gradcam_S3_ResNet50.png
+  Saved gradcam_S3_ViT.png
+  Saved gradcam_S3_Swin.png
+
+  False sample analysis for S3_Swin...
+               Class  Total  FN  FP  Miss_rate     Type
+     Ileocecal valve    628  65  60      0.104 majority
+ Normal clean mucosa   5151 499  44      0.097 majority
+             Pylorus    229  15 185      0.066 majority
+             Erosion     76   4  38      0.053 majority
+         Angiectasia    130   5  14      0.038 majority
+Reduced mucosal view    436  12  74      0.028 majority
+               Ulcer    128   3  12      0.023 majority
+        Foreign body    116   2  98      0.017 majority
+       Blood - fresh     67   0   1      0.000 majority
+    Ampulla of vater      2   0   2      0.000 MINORITY
+            Erythema     24   0  22      0.000 MINORITY
+     Blood - hematin      2   0   0      0.000 MINORITY
+    Lymphangiectasia     89   0  50      0.000 majority
+               Polyp      8   0   5      0.000 MINORITY
+  Saved false_positives_S3_Swin.png
+
+[Phase C] ViT attention map visualisation...
+  Saved vit_attention_maps.png
+
+[Phase D] Fixed autoencoder anomaly detection...
+  AE training on 24,036 Normal images (unnormalised)...
+    Ep05/30 Loss:0.000708
+    Ep10/30 Loss:0.000528
+    Ep15/30 Loss:0.000362
+    Ep20/30 Loss:0.000284
+    Ep25/30 Loss:0.000212
+    Ep30/30 Loss:0.000166
+  Fixed Autoencoder: AUROC=0.6587  AUPRC=0.3631
+  Saved autoencoder_reconstructions.png
+
+[Phase E] Unsupervised anomaly re-run (extract fresh features)...
+  Features: (7086, 1280)  Normal:5151  Anomaly:1935
+  K-Means   : AUROC=0.9448  AUPRC=0.8857
+  IsoForest : AUROC=0.9377  AUPRC=0.8820
+  OCSVM     : AUROC=0.9590  AUPRC=0.9287
+  Fixed AE  : AUROC=0.6587  AUPRC=0.3631
+
+=== ANOMALY DETECTION SUMMARY ===
+  K-Means centroid (unsup)            AUROC:0.9448  AUPRC:0.8857
+  Isolation Forest (unsup)            AUROC:0.9377  AUPRC:0.8820
+  One-Class SVM (unsup)               AUROC:0.9590  AUPRC:0.9287
+  Autoencoder fixed (unsup)           AUROC:0.6587  AUPRC:0.3631
+Saved anomaly_unsupervised_ROC.png
+
+[Phase F] D2 cross-dataset evaluation...
+  D2 classes (8): ['dyed-lifted-polyps', 'dyed-resection-margins', 'esophagitis', 'normal-cecum', 'normal-pylorus', 'normal-z-line', 'polyps', 'ulcerative-colitis']
+    dyed-lifted-polyps                   1000
+    dyed-resection-margins               1000
+    esophagitis                          1000
+    normal-cecum                         1000
+    normal-pylorus                       1000
+    normal-z-line                        1000
+    polyps                               1000
+    ulcerative-colitis                   1000
+  D2->D1 mapping: {'dyed-lifted-polyps': 'Polyp', 'polyps': 'Polyp', 'ulcerative-colitis': 'Ulcer'}
+  D2 overlap: 3,000 images
+    D1 class 'Polyp': 2000
+    D1 class 'Ulcer': 1000
+Thu Apr 16 08:08:47 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   90C    P0            209W /  400W |   11298MiB /  95830MiB |     99%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A          594069      C   python                                10082MiB |
+|    0   N/A  N/A         3728709      C   python                                 1184MiB |
++-----------------------------------------------------------------------------------------+
+==========================================
+ JOB FINISHED ON: Thursday 16 April 2026 08:08:47 AM IST
+==========================================

@@ -1,0 +1,13 @@
+/apps/compilers/anaconda3-24.2/lib/python3.11/site-packages/conda/base/context.py:201: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.3. 
+
+To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
+
+  conda config --add channels defaults
+
+For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
+
+  deprecated.topic(
+Traceback (most recent call last):
+  File "/home/rahuldixit/aksh/dl_project/5_wce_major_final.py", line 718, in <module>
+    tsne  = TSNE(n_components=2, random_state=42, perplexity=40, n_iter=1000)
+TypeError: TSNE.__init__() got an unexpected keyword argument 'n_iter'

@@ -1,0 +1,8 @@
+/var/spool/slurm/slurmd/job21788/slurm_script: line 16: /home/rahuldixit/miniconda3/etc/profile.d/conda.sh: No such file or directory
+
+CondaError: Run 'conda init' before 'conda activate'
+
+/var/spool/slurm/slurmd/job21788/slurm_script: line 22: python: command not found
+/var/spool/slurm/slurmd/job21788/slurm_script: line 23: python: command not found
+/var/spool/slurm/slurmd/job21788/slurm_script: line 24: python: command not found
+/var/spool/slurm/slurmd/job21788/slurm_script: line 36: python: command not found

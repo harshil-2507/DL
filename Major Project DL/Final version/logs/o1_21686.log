@@ -1,0 +1,191 @@
+==========================================
+ JOB STARTED ON: Tuesday 14 April 2026 06:18:03 PM IST
+ Agent: WCE_train_major
+==========================================
+Env 'wce_env' exists. Activating...
+Active env: wce_env
+torch already installed — skipping pip installs.
+libnvJitLink found at: /home/rahuldixit/.local/lib/python3.10/site-packages/nvidia/nvjitlink/lib
+Tue Apr 14 18:18:07 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   90C    P0            224W /  400W |   60064MiB /  95830MiB |    100%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         1591060      C   python                                45420MiB |
+|    0   N/A  N/A         3002671      C   python                                14612MiB |
++-----------------------------------------------------------------------------------------+
+PyTorch : 2.7.1+cu118
+CUDA    : True
+GPU     : NVIDIA H100 NVL
+==========================================
+ STARTING WCE_train_major
+==========================================
+Running script: /home/rahuldixit/aksh/dl_project/train_major.py
+Using device: cuda
+Loading D1 Dataset...
+D1 Classes (14): ['Ampulla of vater', 'Angiectasia', 'Blood - fresh', 'Blood - hematin', 'Erosion', 'Erythema', 'Foreign body', 'Ileocecal valve', 'Lymphangiectasia', 'Normal clean mucosa', 'Polyp', 'Pylorus', 'Reduced mucosal view', 'Ulcer']
+Total D1: 47238 | Train: 33066 | Val: 7086 | Test: 7086
+\n--- Raw Train Split Distribution ---
+Normal clean mucosa: 24036
+Ileocecal valve: 2933
+Reduced mucosal view: 2034
+Pylorus: 1071
+Angiectasia: 606
+Ulcer: 598
+Foreign body: 543
+Lymphangiectasia: 414
+Erosion: 354
+Blood - fresh: 312
+Erythema: 111
+Polyp: 39
+Blood - hematin: 8
+Ampulla of vater: 7
+Class Penalties (Weights) applied to Loss Function:
+Ampulla of vater          : 100.00
+Angiectasia               : 3.90
+Blood - fresh             : 7.57
+Blood - hematin           : 100.00
+Erosion                   : 6.67
+Erythema                  : 21.28
+Foreign body              : 4.35
+Ileocecal valve           : 0.81
+Lymphangiectasia          : 5.70
+Normal clean mucosa       : 0.10
+Polyp                     : 60.56
+Pylorus                   : 2.21
+Reduced mucosal view      : 1.16
+Ulcer                     : 3.95
+\n=== Training: S1_Raw_EffNet ===
+Epoch 01/15 | Train Loss: 0.7858 | Val Loss: 0.3226 | Val Macro F1: 0.2921
+Epoch 02/15 | Train Loss: 0.4707 | Val Loss: 0.1803 | Val Macro F1: 0.2949
+Epoch 03/15 | Train Loss: 0.4566 | Val Loss: 0.1506 | Val Macro F1: 0.3298
+Epoch 04/15 | Train Loss: 0.2062 | Val Loss: 0.1426 | Val Macro F1: 0.3418
+Epoch 05/15 | Train Loss: 0.1280 | Val Loss: 0.0841 | Val Macro F1: 0.3965
+Epoch 06/15 | Train Loss: 0.0648 | Val Loss: 0.0702 | Val Macro F1: 0.4451
+Epoch 07/15 | Train Loss: 0.0507 | Val Loss: 0.0849 | Val Macro F1: 0.4820
+Epoch 08/15 | Train Loss: 0.0333 | Val Loss: 0.0601 | Val Macro F1: 0.4893
+Epoch 09/15 | Train Loss: 0.0319 | Val Loss: 0.0529 | Val Macro F1: 0.4567
+Epoch 10/15 | Train Loss: 0.0272 | Val Loss: 0.0402 | Val Macro F1: 0.5594
+Epoch 11/15 | Train Loss: 0.0169 | Val Loss: 0.0408 | Val Macro F1: 0.5871
+Epoch 12/15 | Train Loss: 0.0126 | Val Loss: 0.0444 | Val Macro F1: 0.6177
+Epoch 13/15 | Train Loss: 0.0102 | Val Loss: 0.0360 | Val Macro F1: 0.6177
+Epoch 14/15 | Train Loss: 0.0072 | Val Loss: 0.0369 | Val Macro F1: 0.6294
+Epoch 15/15 | Train Loss: 0.0069 | Val Loss: 0.0364 | Val Macro F1: 0.6424
+\n=== Training: S2_Under_EffNet ===
+Epoch 01/15 | Train Loss: 4.1609 | Val Loss: 0.4607 | Val Macro F1: 0.2321
+Epoch 02/15 | Train Loss: 1.2824 | Val Loss: 0.2949 | Val Macro F1: 0.3559
+Epoch 03/15 | Train Loss: 0.5206 | Val Loss: 0.1932 | Val Macro F1: 0.4577
+Epoch 04/15 | Train Loss: 0.2792 | Val Loss: 0.1516 | Val Macro F1: 0.3827
+Epoch 05/15 | Train Loss: 0.2027 | Val Loss: 0.1187 | Val Macro F1: 0.4287
+Epoch 06/15 | Train Loss: 0.1621 | Val Loss: 0.1253 | Val Macro F1: 0.4922
+Epoch 07/15 | Train Loss: 0.1365 | Val Loss: 0.0870 | Val Macro F1: 0.4230
+Epoch 08/15 | Train Loss: 0.1641 | Val Loss: 0.1104 | Val Macro F1: 0.4550
+Epoch 09/15 | Train Loss: 0.0940 | Val Loss: 0.1079 | Val Macro F1: 0.4072
+Epoch 10/15 | Train Loss: 0.0723 | Val Loss: 0.1041 | Val Macro F1: 0.3922
+Epoch 11/15 | Train Loss: 0.0495 | Val Loss: 0.0805 | Val Macro F1: 0.4170
+Epoch 12/15 | Train Loss: 0.0410 | Val Loss: 0.0784 | Val Macro F1: 0.4078
+Epoch 13/15 | Train Loss: 0.0270 | Val Loss: 0.0746 | Val Macro F1: 0.4104
+Epoch 14/15 | Train Loss: 0.0494 | Val Loss: 0.0760 | Val Macro F1: 0.3822
+Epoch 15/15 | Train Loss: 0.0396 | Val Loss: 0.0763 | Val Macro F1: 0.4328
+\n=== Training: S3_Bal_EffNet ===
+Epoch 01/15 | Train Loss: 7.7747 | Val Loss: 0.7955 | Val Macro F1: 0.1683
+Epoch 02/15 | Train Loss: 1.9772 | Val Loss: 0.3554 | Val Macro F1: 0.3416
+Epoch 03/15 | Train Loss: 0.8164 | Val Loss: 0.2367 | Val Macro F1: 0.3620
+Epoch 04/15 | Train Loss: 0.5362 | Val Loss: 0.1926 | Val Macro F1: 0.4083
+Epoch 05/15 | Train Loss: 0.3122 | Val Loss: 0.1488 | Val Macro F1: 0.4339
+Epoch 06/15 | Train Loss: 0.2441 | Val Loss: 0.1517 | Val Macro F1: 0.4197
+Epoch 07/15 | Train Loss: 0.2537 | Val Loss: 0.1291 | Val Macro F1: 0.4310
+Epoch 08/15 | Train Loss: 0.2781 | Val Loss: 0.1213 | Val Macro F1: 0.4352
+Epoch 09/15 | Train Loss: 0.2966 | Val Loss: 0.1407 | Val Macro F1: 0.4248
+Epoch 10/15 | Train Loss: 0.2949 | Val Loss: 0.1285 | Val Macro F1: 0.3699
+Epoch 11/15 | Train Loss: 0.2174 | Val Loss: 0.1381 | Val Macro F1: 0.3650
+Epoch 12/15 | Train Loss: 0.1582 | Val Loss: 0.1132 | Val Macro F1: 0.4525
+Epoch 13/15 | Train Loss: 0.0941 | Val Loss: 0.1041 | Val Macro F1: 0.4709
+Epoch 14/15 | Train Loss: 0.1020 | Val Loss: 0.1019 | Val Macro F1: 0.4688
+Epoch 15/15 | Train Loss: 0.0838 | Val Loss: 0.1043 | Val Macro F1: 0.4624
+\n--- S1 (Raw Imbalance) Classification Report ---
+                      precision    recall  f1-score   support
+
+    Ampulla of vater       0.20      1.00      0.33         2
+         Angiectasia       0.60      0.98      0.74       130
+       Blood - fresh       0.64      1.00      0.78        67
+     Blood - hematin       0.67      1.00      0.80         2
+             Erosion       0.27      0.96      0.43        76
+            Erythema       0.14      0.96      0.24        24
+        Foreign body       0.38      0.97      0.55       116
+     Ileocecal valve       0.60      0.98      0.74       628
+    Lymphangiectasia       0.29      1.00      0.45        89
+ Normal clean mucosa       1.00      0.59      0.74      5151
+               Polyp       0.62      1.00      0.76         8
+             Pylorus       0.27      0.98      0.43       229
+Reduced mucosal view       0.65      1.00      0.79       436
+               Ulcer       0.79      0.99      0.88       128
+
+            accuracy                           0.70      7086
+           macro avg       0.51      0.96      0.62      7086
+        weighted avg       0.87      0.70      0.72      7086
+
+\n--- S3 (Balanced Focal) Classification Report ---
+                      precision    recall  f1-score   support
+
+    Ampulla of vater       0.50      1.00      0.67         2
+         Angiectasia       0.25      0.99      0.40       130
+       Blood - fresh       0.54      1.00      0.70        67
+     Blood - hematin       1.00      1.00      1.00         2
+             Erosion       0.06      0.96      0.11        76
+            Erythema       0.06      1.00      0.11        24
+        Foreign body       0.43      0.97      0.59       116
+     Ileocecal valve       0.37      0.76      0.50       628
+    Lymphangiectasia       0.20      0.99      0.33        89
+ Normal clean mucosa       0.00      0.00      0.00      5151
+               Polyp       0.36      1.00      0.53         8
+             Pylorus       0.12      0.94      0.21       229
+Reduced mucosal view       0.55      0.96      0.70       436
+               Ulcer       0.69      0.98      0.81       128
+
+            accuracy                           0.25      7086
+           macro avg       0.37      0.90      0.48      7086
+        weighted avg       0.10      0.25      0.14      7086
+
+Finished evaluating anomalies. ROC curve saved with AUC: 0.928
+HPC Train script fully complete. Results outputted.
+Tue Apr 14 18:36:37 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   90C    P0            228W /  400W |   62122MiB /  95830MiB |    100%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4000      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         1591060      C   python                                45420MiB |
+|    0   N/A  N/A         3002671      C   python                                14612MiB |
+|    0   N/A  N/A         3061846      C   python                                 2052MiB |
++-----------------------------------------------------------------------------------------+
+==========================================
+ JOB FINISHED ON: Tuesday 14 April 2026 06:36:38 PM IST
+==========================================

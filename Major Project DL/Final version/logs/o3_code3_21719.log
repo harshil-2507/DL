@@ -1,0 +1,317 @@
+==========================================
+ JOB STARTED ON: Tuesday 14 April 2026 07:24:03 PM IST
+ Agent: WCE_code3_final (ResNet/ViT/Swin)
+==========================================
+Env 'wce_env2' exists. Activating...
+Active env: wce_env2
+torch already installed — skipping pip installs.
+libnvJitLink found at: /home/rahuldixit/.local/lib/python3.10/site-packages/nvidia/nvjitlink/lib
+Tue Apr 14 19:24:08 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   60C    P0            113W /  400W |   49028MiB /  95830MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4394      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         3464174      C   ...s/alignn_env_svnit/bin/python      24518MiB |
+|    0   N/A  N/A         3471707      C   ...s/alignn_env_svnit/bin/python      24482MiB |
++-----------------------------------------------------------------------------------------+
+PyTorch : 2.7.1+cu118
+CUDA    : True
+GPU     : NVIDIA H100 NVL
+==========================================
+ STARTING WCE_code3_final
+==========================================
+Running script: /home/rahuldixit/aksh/dl_project/code3_final.py
+Device: cuda
+IMG=224  BATCH=32  EPOCHS=51  FOCAL_GAMMA=2.0
+
+--- Training ResNet50 ---
+  Ep 1/51 | Tr_Loss: 0.1023 | Vl_MacroF1: 0.0270 | LR: 1.00e-03
+  Ep 2/51 | Tr_Loss: 0.0298 | Vl_MacroF1: 0.0352 | LR: 1.00e-03
+  Ep 3/51 | Tr_Loss: 0.0041 | Vl_MacroF1: 0.0474 | LR: 1.00e-03
+  Ep 4/51 | Tr_Loss: 0.0022 | Vl_MacroF1: 0.1069 | LR: 1.00e-03
+  Ep 5/51 | Tr_Loss: 0.0025 | Vl_MacroF1: 0.1203 | LR: 1.00e-03
+  Ep 6/51 | Tr_Loss: 0.0011 | Vl_MacroF1: 0.1273 | LR: 1.00e-03
+  Ep 7/51 | Tr_Loss: 0.0009 | Vl_MacroF1: 0.1245 | LR: 1.00e-03
+  Ep 8/51 | Tr_Loss: 0.0009 | Vl_MacroF1: 0.1479 | LR: 1.00e-03
+  Ep 9/51 | Tr_Loss: 0.0006 | Vl_MacroF1: 0.1565 | LR: 1.00e-03
+  Ep 10/51 | Tr_Loss: 0.0005 | Vl_MacroF1: 0.1633 | LR: 1.00e-03
+  Ep 11/51 | Tr_Loss: 0.0003 | Vl_MacroF1: 0.1771 | LR: 1.00e-03
+  Ep 12/51 | Tr_Loss: 0.0003 | Vl_MacroF1: 0.1593 | LR: 1.00e-03
+  Ep 13/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.1851 | LR: 1.00e-03
+  Ep 14/51 | Tr_Loss: 0.0006 | Vl_MacroF1: 0.1551 | LR: 1.00e-03
+  Ep 15/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.1768 | LR: 1.00e-03
+  Ep 16/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.1900 | LR: 5.00e-04
+  Ep 17/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.2075 | LR: 5.00e-04
+  Ep 18/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.2082 | LR: 5.00e-04
+  Ep 19/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2094 | LR: 5.00e-04
+  Ep 20/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2103 | LR: 5.00e-04
+  Ep 21/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2261 | LR: 5.00e-04
+  Ep 22/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.2355 | LR: 5.00e-04
+  Ep 23/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2380 | LR: 5.00e-04
+  Ep 24/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2407 | LR: 5.00e-04
+  Ep 25/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2336 | LR: 5.00e-04
+  Ep 26/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2486 | LR: 5.00e-04
+  Ep 27/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2653 | LR: 5.00e-04
+  Ep 28/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2776 | LR: 5.00e-04
+  Ep 29/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2791 | LR: 5.00e-04
+  Ep 30/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2688 | LR: 5.00e-04
+  Ep 31/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2681 | LR: 5.00e-04
+  Ep 32/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.2722 | LR: 2.50e-04
+  Ep 33/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2567 | LR: 2.50e-04
+  Ep 34/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2757 | LR: 1.25e-04
+  Ep 35/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2545 | LR: 1.25e-04
+  Ep 36/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2743 | LR: 6.25e-05
+  Ep 37/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2763 | LR: 6.25e-05
+  Ep 38/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2722 | LR: 3.13e-05
+  Ep 39/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2828 | LR: 3.13e-05
+  Ep 40/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2847 | LR: 3.13e-05
+  Ep 41/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2843 | LR: 3.13e-05
+  Ep 42/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2709 | LR: 3.13e-05
+  Ep 43/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2713 | LR: 1.56e-05
+  Ep 44/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2816 | LR: 1.56e-05
+  Ep 45/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2743 | LR: 7.81e-06
+  Ep 46/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2851 | LR: 7.81e-06
+  Ep 47/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2702 | LR: 7.81e-06
+  Ep 48/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2684 | LR: 7.81e-06
+  Ep 49/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3055 | LR: 3.91e-06
+  Ep 50/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2974 | LR: 3.91e-06
+  Ep 51/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2948 | LR: 3.91e-06
+
+=== ResNet50 Test Classification Report ===
+                      precision    recall  f1-score   support
+
+    Ampulla of vater       0.05      1.00      0.10         2
+         Angiectasia       0.18      0.91      0.30       131
+       Blood - fresh       0.36      1.00      0.53        68
+     Blood - hematin       0.75      1.00      0.86         3
+             Erosion       0.03      0.91      0.05        77
+            Erythema       0.03      1.00      0.05        25
+        Foreign body       0.40      0.94      0.56       117
+     Ileocecal valve       0.89      0.12      0.21       629
+    Lymphangiectasia       0.35      0.94      0.51        90
+ Normal clean mucosa       0.00      0.00      0.00      5152
+               Polyp       0.08      1.00      0.14         9
+             Pylorus       0.28      0.77      0.41       230
+Reduced mucosal view       0.52      0.57      0.55       437
+               Ulcer       0.18      0.93      0.31       129
+
+            accuracy                           0.16      7099
+           macro avg       0.29      0.79      0.33      7099
+        weighted avg       0.14      0.16      0.10      7099
+
+Exporting False Samples for ResNet50...
+  Saved 5983 errors to ResNet50_false_samples.txt for future GradCAM.
+
+--- Training ViT_B_16 ---
+  Ep 1/51 | Tr_Loss: 0.0703 | Vl_MacroF1: 0.0563 | LR: 1.00e-03
+  Ep 2/51 | Tr_Loss: 0.0015 | Vl_MacroF1: 0.1149 | LR: 1.00e-03
+  Ep 3/51 | Tr_Loss: 0.0009 | Vl_MacroF1: 0.1681 | LR: 1.00e-03
+  Ep 4/51 | Tr_Loss: 0.0004 | Vl_MacroF1: 0.1948 | LR: 1.00e-03
+  Ep 5/51 | Tr_Loss: 0.0003 | Vl_MacroF1: 0.1724 | LR: 1.00e-03
+  Ep 6/51 | Tr_Loss: 0.0002 | Vl_MacroF1: 0.2126 | LR: 1.00e-03
+  Ep 7/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2065 | LR: 1.00e-03
+  Ep 8/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2397 | LR: 1.00e-03
+  Ep 9/51 | Tr_Loss: 0.0001 | Vl_MacroF1: 0.2656 | LR: 1.00e-03
+  Ep 10/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2446 | LR: 1.00e-03
+  Ep 11/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2697 | LR: 1.00e-03
+  Ep 12/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2586 | LR: 1.00e-03
+  Ep 13/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2845 | LR: 1.00e-03
+  Ep 14/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2752 | LR: 1.00e-03
+  Ep 15/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3046 | LR: 1.00e-03
+  Ep 16/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.2962 | LR: 1.00e-03
+  Ep 17/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3396 | LR: 1.00e-03
+  Ep 18/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3298 | LR: 1.00e-03
+  Ep 19/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3155 | LR: 1.00e-03
+  Ep 20/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3291 | LR: 5.00e-04
+  Ep 21/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3311 | LR: 5.00e-04
+  Ep 22/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3427 | LR: 2.50e-04
+  Ep 23/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3441 | LR: 2.50e-04
+  Ep 24/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3416 | LR: 2.50e-04
+  Ep 25/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3452 | LR: 2.50e-04
+  Ep 26/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3452 | LR: 2.50e-04
+  Ep 27/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3480 | LR: 2.50e-04
+  Ep 28/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3477 | LR: 2.50e-04
+  Ep 29/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3497 | LR: 2.50e-04
+  Ep 30/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3512 | LR: 2.50e-04
+  Ep 31/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3627 | LR: 2.50e-04
+  Ep 32/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3521 | LR: 2.50e-04
+  Ep 33/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3676 | LR: 2.50e-04
+  Ep 34/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3682 | LR: 2.50e-04
+  Ep 35/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3312 | LR: 2.50e-04
+  Ep 36/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3628 | LR: 2.50e-04
+  Ep 37/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3622 | LR: 1.25e-04
+  Ep 38/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3677 | LR: 1.25e-04
+  Ep 39/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3617 | LR: 6.25e-05
+  Ep 40/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3585 | LR: 6.25e-05
+  Ep 41/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3624 | LR: 3.13e-05
+  Ep 42/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3631 | LR: 3.13e-05
+  Ep 43/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3676 | LR: 1.56e-05
+  Ep 44/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3669 | LR: 1.56e-05
+  Ep 45/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3667 | LR: 7.81e-06
+  Ep 46/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3669 | LR: 7.81e-06
+  Ep 47/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3670 | LR: 3.91e-06
+  Ep 48/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3670 | LR: 3.91e-06
+  Ep 49/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3670 | LR: 1.95e-06
+  Ep 50/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3669 | LR: 1.95e-06
+  Ep 51/51 | Tr_Loss: 0.0000 | Vl_MacroF1: 0.3669 | LR: 9.77e-07
+
+=== ViT_B_16 Test Classification Report ===
+                      precision    recall  f1-score   support
+
+    Ampulla of vater       0.02      1.00      0.04         2
+         Angiectasia       0.25      0.98      0.39       131
+       Blood - fresh       0.35      1.00      0.51        68
+     Blood - hematin       0.60      1.00      0.75         3
+             Erosion       0.12      0.90      0.22        77
+            Erythema       0.07      1.00      0.13        25
+        Foreign body       0.23      0.97      0.38       117
+     Ileocecal valve       0.38      0.60      0.47       629
+    Lymphangiectasia       0.11      1.00      0.19        90
+ Normal clean mucosa       0.00      0.00      0.00      5152
+               Polyp       0.39      1.00      0.56         9
+             Pylorus       0.10      0.92      0.18       230
+Reduced mucosal view       0.48      0.86      0.62       437
+               Ulcer       0.68      0.91      0.78       129
+
+            accuracy                           0.22      7099
+           macro avg       0.27      0.87      0.37      7099
+        weighted avg       0.09      0.22      0.12      7099
+
+Exporting False Samples for ViT_B_16...
+  Saved 5509 errors to ViT_B_16_false_samples.txt for future GradCAM.
+Downloading: "https://download.pytorch.org/models/swin_t-704ceda3.pth" to /home/rahuldixit/.cache/torch/hub/checkpoints/swin_t-704ceda3.pth
+
+--- Training Swin_T ---
+  Ep 1/51 | Tr_Loss: 0.1060 | Vl_MacroF1: 0.1085 | LR: 1.00e-03
+  Ep 2/51 | Tr_Loss: 0.0024 | Vl_MacroF1: 0.2367 | LR: 1.00e-03
+  Ep 3/51 | Tr_Loss: 0.0874 | Vl_MacroF1: 0.0019 | LR: 1.00e-03
+  Ep 4/51 | Tr_Loss: 0.0080 | Vl_MacroF1: 0.0435 | LR: 1.00e-03
+  Ep 5/51 | Tr_Loss: 0.0046 | Vl_MacroF1: 0.0467 | LR: 5.00e-04
+  Ep 6/51 | Tr_Loss: 0.0036 | Vl_MacroF1: 0.0425 | LR: 5.00e-04
+  Ep 7/51 | Tr_Loss: 0.0029 | Vl_MacroF1: 0.0803 | LR: 2.50e-04
+  Ep 8/51 | Tr_Loss: 0.0065 | Vl_MacroF1: 0.0726 | LR: 2.50e-04
+  Ep 9/51 | Tr_Loss: 0.0024 | Vl_MacroF1: 0.0772 | LR: 1.25e-04
+  Ep 10/51 | Tr_Loss: 0.0026 | Vl_MacroF1: 0.0674 | LR: 1.25e-04
+  Ep 11/51 | Tr_Loss: 0.0021 | Vl_MacroF1: 0.0744 | LR: 6.25e-05
+  Ep 12/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0737 | LR: 6.25e-05
+  Ep 13/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0800 | LR: 3.13e-05
+  Ep 14/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0823 | LR: 3.13e-05
+  Ep 15/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0830 | LR: 1.56e-05
+  Ep 16/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0836 | LR: 1.56e-05
+  Ep 17/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0797 | LR: 7.81e-06
+  Ep 18/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0810 | LR: 7.81e-06
+  Ep 19/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0799 | LR: 3.91e-06
+  Ep 20/51 | Tr_Loss: 0.0017 | Vl_MacroF1: 0.0790 | LR: 3.91e-06
+  Ep 21/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0796 | LR: 1.95e-06
+  Ep 22/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0805 | LR: 1.95e-06
+  Ep 23/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0814 | LR: 9.77e-07
+  Ep 24/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0812 | LR: 9.77e-07
+  Ep 25/51 | Tr_Loss: 0.0023 | Vl_MacroF1: 0.0807 | LR: 4.88e-07
+  Ep 26/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0808 | LR: 4.88e-07
+  Ep 27/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0809 | LR: 2.44e-07
+  Ep 28/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 2.44e-07
+  Ep 29/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.22e-07
+  Ep 30/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.22e-07
+  Ep 31/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 6.10e-08
+  Ep 32/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 6.10e-08
+  Ep 33/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0809 | LR: 3.05e-08
+  Ep 34/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 3.05e-08
+  Ep 35/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 36/51 | Tr_Loss: 0.0021 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 37/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 38/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 39/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 40/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 41/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 42/51 | Tr_Loss: 0.0020 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 43/51 | Tr_Loss: 0.0019 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 44/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 45/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 46/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 47/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 48/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 49/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 50/51 | Tr_Loss: 0.0018 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+  Ep 51/51 | Tr_Loss: 0.0017 | Vl_MacroF1: 0.0809 | LR: 1.53e-08
+
+=== Swin_T Test Classification Report ===
+                      precision    recall  f1-score   support
+
+    Ampulla of vater       0.14      0.50      0.22         2
+         Angiectasia       0.36      0.62      0.46       131
+       Blood - fresh       0.18      0.94      0.30        68
+     Blood - hematin       1.00      0.67      0.80         3
+             Erosion       0.01      0.86      0.03        77
+            Erythema       0.02      0.92      0.04        25
+        Foreign body       0.67      0.53      0.59       117
+     Ileocecal valve       0.00      0.00      0.00       629
+    Lymphangiectasia       0.20      0.87      0.32        90
+ Normal clean mucosa       0.00      0.00      0.00      5152
+               Polyp       0.04      1.00      0.08         9
+             Pylorus       0.00      0.00      0.00       230
+Reduced mucosal view       1.00      0.00      0.00       437
+               Ulcer       0.51      0.22      0.30       129
+
+            accuracy                           0.06      7099
+           macro avg       0.30      0.51      0.23      7099
+        weighted avg       0.09      0.06      0.03      7099
+
+Exporting False Samples for Swin_T...
+  Saved 6684 errors to Swin_T_false_samples.txt for future GradCAM.
+
+=======================================================
+  MODEL COMPARISON TABLE (S3 Balanced Dataset)
+=======================================================
+Model Architecture   | Macro F1   | Weighted F1
+ResNet50             | 0.3258     | 0.0988    
+ViT_B_16             | 0.3733     | 0.1241    
+Swin_T               | 0.2258     | 0.0320    
+
+=======================================================
+  PHASE 2: UNSUPERVISED ANOMALY CLUSTERING (ResNet50)
+=======================================================
+Extracting intermediate features for unsupervised K-Means...
+Running K-Means (K=1) purely on 'Normal' features to find centroid...
+Calculating Euclidean spatial distances for all test samples...
+Unsupervised Extracted Feature K-Means AUROC: 0.6900
+
+Full Advanced Pipeline (Phase 4) Executed Successfully!
+Tue Apr 14 20:05:27 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 570.211.01             Driver Version: 570.211.01     CUDA Version: 12.8     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H100 NVL                Off |   00000000:01:00.0 Off |                    0 |
+| N/A   86C    P0            151W /  400W |   49024MiB /  95830MiB |     10%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|    0   N/A  N/A            4394      G   /usr/lib/xorg/Xorg                        4MiB |
+|    0   N/A  N/A         3464174      C   ...s/alignn_env_svnit/bin/python      24518MiB |
+|    0   N/A  N/A         3471707      C   ...s/alignn_env_svnit/bin/python      24478MiB |
++-----------------------------------------------------------------------------------------+
+==========================================
+ JOB FINISHED ON: Tuesday 14 April 2026 08:05:27 PM IST
+==========================================

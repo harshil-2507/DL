@@ -1,0 +1,17 @@
+/apps/compilers/anaconda3-24.2/lib/python3.11/site-packages/conda/base/context.py:201: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.3. 
+
+To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
+
+  conda config --add channels defaults
+
+For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
+
+  deprecated.topic(
+Traceback (most recent call last):
+  File "/home/rahuldixit/aksh/dl_project/6_wce_major_final.py", line 700, in <module>
+    rep = classification_report(yt,yp,target_names=class_names,output_dict=True,zero_division=0)
+  File "/home/rahuldixit/.local/lib/python3.10/site-packages/sklearn/utils/_param_validation.py", line 218, in wrapper
+    return func(*args, **kwargs)
+  File "/home/rahuldixit/.local/lib/python3.10/site-packages/sklearn/metrics/_classification.py", line 2970, in classification_report
+    raise ValueError(
+ValueError: Number of classes, 11, does not match size of target_names, 14. Try specifying the labels parameter

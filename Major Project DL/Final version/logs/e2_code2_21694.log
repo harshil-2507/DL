@@ -1,0 +1,14 @@
+/apps/compilers/anaconda3-24.2/lib/python3.11/site-packages/conda/base/context.py:201: FutureWarning: Adding 'defaults' to channel list implicitly is deprecated and will be removed in 25.3. 
+
+To remove this warning, please choose a default channel explicitly with conda's regular configuration system, e.g. by adding 'defaults' to the list of channels:
+
+  conda config --add channels defaults
+
+For more information see https://docs.conda.io/projects/conda/en/stable/user-guide/configuration/use-condarc.html
+
+  deprecated.topic(
+  0%|          | 0/2172 [00:00<?, ?it/s]  6%|▌         | 126/2172 [00:00<00:01, 1255.01it/s] 12%|█▏        | 252/2172 [00:00<00:01, 1217.77it/s] 17%|█▋        | 374/2172 [00:00<00:01, 1207.36it/s] 23%|██▎       | 495/2172 [00:00<00:01, 1191.47it/s] 28%|██▊       | 618/2172 [00:00<00:01, 1203.23it/s] 34%|███▍      | 740/2172 [00:00<00:01, 1206.89it/s] 40%|███▉      | 861/2172 [00:00<00:01, 1179.70it/s] 45%|████▌     | 981/2172 [00:00<00:01, 1185.50it/s] 51%|█████     | 1100/2172 [00:00<00:00, 1181.19it/s] 56%|█████▌    | 1219/2172 [00:01<00:01, 838.39it/s]  62%|██████▏   | 1340/2172 [00:01<00:00, 924.56it/s] 67%|██████▋   | 1460/2172 [00:01<00:00, 992.59it/s] 73%|███████▎  | 1581/2172 [00:01<00:00, 1049.37it/s] 78%|███████▊  | 1700/2172 [00:01<00:00, 1086.75it/s] 84%|████████▍ | 1820/2172 [00:01<00:00, 1116.58it/s] 89%|████████▉ | 1936/2172 [00:01<00:00, 1126.79it/s] 95%|█████████▍| 2058/2172 [00:01<00:00, 1152.01it/s]100%|██████████| 2172/2172 [00:01<00:00, 1110.72it/s]
+Traceback (most recent call last):
+  File "/home/rahuldixit/aksh/dl_project/code2.py", line 833, in <module>
+    tsne = TSNE(n_components=2, perplexity=30, n_iter=1000,
+TypeError: TSNE.__init__() got an unexpected keyword argument 'n_iter'
